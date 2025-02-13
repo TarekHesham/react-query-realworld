@@ -77,7 +77,8 @@ const ButtonsWIthoutAccess = ({ articleInfo }: IButtonsWIthoutAccessProps) => {
         onClick={() => onToggleFollow()}
       >
         <i className="ion-plus-round"></i>
-        &nbsp; Follow {articleInfo.author.username} <span className="counter">(10)</span>
+        &nbsp; Follow {articleInfo.author.username}
+        <span className="counter">({articleInfo.author.followersCount})</span>
       </button>
       &nbsp;&nbsp;
       <button

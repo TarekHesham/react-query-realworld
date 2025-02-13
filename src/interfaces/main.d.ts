@@ -13,6 +13,7 @@ export interface IArticle {
     bio: string;
     image: string;
     following: true;
+    followersCount: number;
   };
 }
 

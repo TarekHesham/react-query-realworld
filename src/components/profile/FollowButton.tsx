@@ -25,9 +25,7 @@ const FollowButton = ({ profileName, isFollow }: IFollowButton) => {
         },
       );
       return;
-    }
-
-    if (!isFollow) {
+    } else {
       followUserMutation.mutate(
         { username },
         {
@@ -49,7 +47,7 @@ const FollowButton = ({ profileName, isFollow }: IFollowButton) => {
       ) : (
         <button
           type="button"
-          className={`btn btn-sm btn-outline-${isFollow ? 'primary' : 'secondary'} action-btn`}
+          className={`btn btn-sm ${isFollow ? 'btn-outline-primary' : 'btn-outline-secondary'} action-btn`}
           onClick={() => onToggleFollow()}
         >
           <i className="ion-plus-round"></i>
